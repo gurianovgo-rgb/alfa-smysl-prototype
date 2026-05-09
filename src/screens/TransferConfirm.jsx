@@ -5,7 +5,7 @@ export default function TransferConfirm() {
   const { setScreen, withdrawAmount, formatNumber } = useApp()
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] screen-enter items-center justify-center px-5 py-12">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter items-center justify-center px-5 py-12">
       <div className="absolute top-4 right-4">
         <button
           onClick={() => setScreen('savings-active')}

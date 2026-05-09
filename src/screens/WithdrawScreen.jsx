@@ -43,7 +43,7 @@ export default function WithdrawScreen() {
   ]
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] screen-enter">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter">
       <div className="px-4 pt-4 pb-4 flex items-center justify-between">
         <button onClick={() => setScreen('savings-active')} className="btn-press p-1">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

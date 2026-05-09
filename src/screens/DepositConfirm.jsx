@@ -20,7 +20,7 @@ export default function DepositConfirm() {
   }, [])
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] screen-enter items-center justify-center px-5 py-12">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter items-center justify-center px-5 py-12">
       <div className="absolute top-4 right-4">
         <button onClick={handleClose} className="w-9 h-9 rounded-full bg-[#2a2a2a] flex items-center justify-center btn-press">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">

@@ -6,7 +6,7 @@ export default function SavingsScreen() {
   const { setScreen } = useApp()
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] screen-enter pb-24">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter pb-24">
       <div className="px-4 pt-4">
         <div className="flex items-center justify-between mb-6">
           <button onClick={() => setScreen('home')} className="btn-press p-1">

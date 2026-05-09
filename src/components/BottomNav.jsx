@@ -7,7 +7,7 @@ export default function BottomNav() {
   const isHome = ['home'].includes(screen)
 
   return (
-    <div className="fixed bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[390px] bg-[#0a0a0a] border-t border-[#1a1a1a] pb-safe z-50">
+    <div className="fixed bottom-0 left-0 right-0 w-full bg-[#0a0a0a] border-t border-[#1a1a1a] z-50">
       <div className="flex items-center justify-around px-2 pt-2 pb-4">
         <button
           onClick={() => setScreen('home')}

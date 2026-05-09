@@ -43,7 +43,7 @@ export default function PauseScreen() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] screen-enter px-5 pt-12 pb-8">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter px-5 pt-12 pb-8">
       <div className="absolute top-4 right-4">
         <button onClick={handleWait} className="w-9 h-9 rounded-full bg-[#2a2a2a] flex items-center justify-center btn-press">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none">

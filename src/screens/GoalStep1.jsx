@@ -20,7 +20,7 @@ export default function GoalStep1() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] screen-enter">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter">
       <div className="relative">
         <div className="absolute inset-0 overflow-hidden pointer-events-none" style={{ zIndex: 0 }}>
           <div className="absolute inset-0 bg-[#0a0a0a] opacity-70" />

@@ -64,7 +64,7 @@ export default function GoalStep2() {
   }
 
   return (
-    <div className="flex flex-col min-h-screen bg-[#0a0a0a] screen-enter">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter">
       <div className="px-4 pt-4 pb-4">
         <button onClick={() => setScreen('goal-step1')} className="btn-press p-1 mb-2">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">

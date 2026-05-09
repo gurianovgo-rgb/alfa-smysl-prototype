@@ -41,10 +41,8 @@ function Router() {
 export default function App() {
   return (
     <AppProvider>
-      <div className="min-h-screen bg-[#0a0a0a] flex justify-center" style={{ background: '#0a0a0a' }}>
-        <div className="w-full max-w-[390px] relative bg-[#0a0a0a] min-h-screen overflow-hidden">
-          <Router />
-        </div>
+      <div className="w-full bg-[#0a0a0a]" style={{ minHeight: '100dvh' }}>
+        <Router />
       </div>
     </AppProvider>
   )
