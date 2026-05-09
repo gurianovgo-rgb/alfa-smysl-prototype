@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(cmd /c \"where node 2>&1\")",
+      "PowerShell($env:PATH -split ';' | Where-Object { $_ -ne '' } | ForEach-Object { if \\(Test-Path \"$_\\\\node.exe\"\\) { $_ } })",
+      "PowerShell($nodeDir = \"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\node-portable\"; New-Item -ItemType Directory -Force -Path $nodeDir | Out-Null; Write-Host \"Downloading Node.js portable ZIP...\"; Invoke-WebRequest -Uri \"https://nodejs.org/dist/v20.19.0/node-v20.19.0-win-x64.zip\" -OutFile \"$nodeDir\\\\node.zip\" -UseBasicParsing; Write-Host \"Done downloading\"; Get-Item \"$nodeDir\\\\node.zip\" | Select-Object Length)",
+      "PowerShell($nodeDir = \"C:\\\\Users\\\\User\\\\AppData\\\\Local\\\\node-portable\"; Expand-Archive -Path \"$nodeDir\\\\node.zip\" -DestinationPath $nodeDir -Force; $nodePath = \"$nodeDir\\\\node-v20.19.0-win-x64\"; Write-Host \"Node path: $nodePath\"; & \"$nodePath\\\\node.exe\" --version; & \"$nodePath\\\\npm.cmd\" --version)",
+      "mcp__Claude_Preview__preview_start"
+    ]
+  }
+}

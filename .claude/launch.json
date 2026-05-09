@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "alfa-smysl",
+      "runtimeExecutable": "C:\\Users\\User\\OneDrive\\Desktop\\прототип\\start-dev.cmd",
+      "runtimeArgs": [],
+      "port": 5173,
+      "autoPort": true
+    }
+  ]
+}
