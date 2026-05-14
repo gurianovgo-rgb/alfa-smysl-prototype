@@ -21,34 +21,65 @@ export default function BottomNav() {
         </button>
 
         <button className="flex flex-col items-center gap-1 btn-press">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="#8E8E93" strokeWidth="1.5" fill="none"/>
-            <path d="M8 12H16M8 12L11 9M8 12L11 15M16 12L13 9M16 12L13 15" stroke="#8E8E93" strokeWidth="1.5" strokeLinecap="round"/>
+          <svg width="28" height="24" viewBox="0 0 28 24" fill="none">
+            <circle cx="9" cy="12" r="8.5" fill="#8E8E93"/>
+            <circle cx="19" cy="12" r="8.5" fill="#8E8E93"/>
+            <path d="M10 12H18M13.5 9L10 12L13.5 15M14.5 9L18 12L14.5 15" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round"/>
           </svg>
           <span className="text-[10px] font-medium text-[#8E8E93]">Платежи</span>
         </button>
 
         <button className="flex flex-col items-center -mt-3 btn-press">
-          <div className="w-14 h-14 rounded-full bg-[#FF3B30] flex items-center justify-center shadow-lg">
-            <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
-              <path d="M14 24C14 24 4 18 4 10.5C4 7.46 6.46 5 9.5 5C11.26 5 12.85 5.84 14 7.09C15.15 5.84 16.74 5 18.5 5C21.54 5 24 7.46 24 10.5C24 18 14 24 14 24Z"
-                fill="white"/>
-            </svg>
-          </div>
+          <svg width="56" height="56" viewBox="0 0 56 56" fill="none">
+            <defs>
+              <radialGradient id="heart-main" cx="42%" cy="35%" r="60%">
+                <stop offset="0%" stopColor="#FF6B5B"/>
+                <stop offset="35%" stopColor="#E8001A"/>
+                <stop offset="75%" stopColor="#B00010"/>
+                <stop offset="100%" stopColor="#7A0009"/>
+              </radialGradient>
+              <radialGradient id="heart-rim" cx="50%" cy="80%" r="55%">
+                <stop offset="0%" stopColor="#FF2D1A" stopOpacity="0.6"/>
+                <stop offset="100%" stopColor="#6A0008" stopOpacity="0"/>
+              </radialGradient>
+              <radialGradient id="heart-gloss" cx="38%" cy="28%" r="45%">
+                <stop offset="0%" stopColor="white" stopOpacity="0.9"/>
+                <stop offset="60%" stopColor="white" stopOpacity="0.15"/>
+                <stop offset="100%" stopColor="white" stopOpacity="0"/>
+              </radialGradient>
+              <radialGradient id="heart-gloss2" cx="65%" cy="75%" r="30%">
+                <stop offset="0%" stopColor="white" stopOpacity="0.4"/>
+                <stop offset="100%" stopColor="white" stopOpacity="0"/>
+              </radialGradient>
+              <filter id="heart-shadow" x="-10%" y="-10%" width="120%" height="130%">
+                <feDropShadow dx="0" dy="3" stdDeviation="4" floodColor="#CC0010" floodOpacity="0.6"/>
+              </filter>
+              <clipPath id="heart-clip">
+                <path d="M28 49C28 49 6 37 6 22C6 14.82 11.82 9 19 9C22.5 9 25.7 10.4 28 12.8C30.3 10.4 33.5 9 37 9C44.18 9 50 14.82 50 22C50 37 28 49 28 49Z"/>
+              </clipPath>
+            </defs>
+            <path d="M28 49C28 49 6 37 6 22C6 14.82 11.82 9 19 9C22.5 9 25.7 10.4 28 12.8C30.3 10.4 33.5 9 37 9C44.18 9 50 14.82 50 22C50 37 28 49 28 49Z" fill="url(#heart-main)" filter="url(#heart-shadow)"/>
+            <path d="M28 49C28 49 6 37 6 22C6 14.82 11.82 9 19 9C22.5 9 25.7 10.4 28 12.8C30.3 10.4 33.5 9 37 9C44.18 9 50 14.82 50 22C50 37 28 49 28 49Z" fill="url(#heart-rim)"/>
+            <path d="M28 47C28 47 8 36 8 22C8 15.92 12.92 11 19 11C22.2 11 25.1 12.3 28 15C30.9 12.3 33.8 11 37 11C43.08 11 48 15.92 48 22C48 36 28 47 28 47Z" fill="url(#heart-main)"/>
+            <ellipse cx="22" cy="19" rx="9" ry="5.5" fill="url(#heart-gloss)" clipPath="url(#heart-clip)"/>
+            <ellipse cx="38" cy="37" rx="6" ry="4" fill="url(#heart-gloss2)" clipPath="url(#heart-clip)"/>
+          </svg>
         </button>
 
         <button className="flex flex-col items-center gap-1 btn-press">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <circle cx="12" cy="12" r="9" stroke="#8E8E93" strokeWidth="1.5" fill="none"/>
-            <path d="M12 7V12L15 15" stroke="#8E8E93" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+            <circle cx="12" cy="12" r="10" fill="#8E8E93"/>
+            <rect x="11" y="6.5" width="2" height="5.5" rx="1" fill="white"/>
+            <rect x="11" y="11" width="4.5" height="2" rx="1" fill="white"/>
           </svg>
           <span className="text-[10px] font-medium text-[#8E8E93]">История</span>
         </button>
 
         <button className="flex flex-col items-center gap-1 btn-press">
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M21 15C21 15.53 20.79 16.04 20.41 16.41C20.04 16.79 19.53 17 19 17H7L3 21V5C3 4.47 3.21 3.96 3.59 3.59C3.96 3.21 4.47 3 5 3H19C19.53 3 20.04 3.21 20.41 3.59C20.79 3.96 21 4.47 21 5V15Z"
-              stroke="#8E8E93" strokeWidth="1.5" fill="none" strokeLinejoin="round"/>
+            <path d="M20 3H4C3.45 3 3 3.45 3 4V16C3 16.55 3.45 17 4 17H7V21L12.5 17H20C20.55 17 21 16.55 21 16V4C21 3.45 20.55 3 20 3Z" fill="#8E8E93"/>
+            <rect x="7" y="8.5" width="10" height="2" rx="1" fill="white"/>
+            <rect x="7" y="12" width="7" height="2" rx="1" fill="white"/>
           </svg>
           <span className="text-[10px] font-medium text-[#8E8E93]">Чаты</span>
         </button>
