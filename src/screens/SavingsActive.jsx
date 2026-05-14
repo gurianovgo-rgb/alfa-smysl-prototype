@@ -1,6 +1,7 @@
 import React from 'react'
 import { useApp } from '../context/AppContext'
 import BottomNav from '../components/BottomNav'
+import FlameCharacter from '../components/FlameCharacter'
 
 export default function SavingsActive() {
   const {
@@ -40,7 +41,7 @@ export default function SavingsActive() {
             </p>
             <p className="text-[#8E8E93] text-sm">Доход за всё время: {formatNumber(incomeTotal)} ₽</p>
           </div>
-          <span style={{ fontSize: '72px', lineHeight: 1 }} className="flame-anim -mt-2 -mr-1">🔥</span>
+          <FlameCharacter size={100} className="flame-anim" style={{ marginTop: '-8px', marginRight: '-4px' }} />
         </div>
 
         <div className="bg-[#1a1a1a] rounded-2xl p-4 mb-4 flex items-center justify-between">
