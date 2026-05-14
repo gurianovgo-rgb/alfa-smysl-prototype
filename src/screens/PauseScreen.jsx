@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useApp } from '../context/AppContext'
+import FlameCharacter from '../components/FlameCharacter'
 
 export default function PauseScreen() {
   const {
@@ -114,8 +115,8 @@ export default function PauseScreen() {
           <p className="text-[#8E8E93] text-sm text-center">таймер остывания</p>
         </div>
         <div className="flex flex-col items-center justify-center gap-1">
-          <span style={{ fontSize: '48px' }}>🧊</span>
-          <span className="text-2xl flame-anim">🔥</span>
+          <span style={{ fontSize: '52px' }}>🧊</span>
+          <FlameCharacter size={52} className="flame-anim" />
         </div>
       </div>
 
