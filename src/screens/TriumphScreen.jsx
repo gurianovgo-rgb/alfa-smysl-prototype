@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useApp } from '../context/AppContext'
+import FlameCharacter from '../components/FlameCharacter'
 
 const CONFETTI_COLORS = ['#FF3B30', '#FFD60A', '#FFFFFF', '#FF9F0A', '#FF453A', '#FFE5B4', '#30D158']
 
@@ -76,8 +77,8 @@ export default function TriumphScreen() {
         </button>
       </div>
 
-      <div className="absolute top-8 left-0 z-10 pointer-events-none">
-        <span style={{ fontSize: '120px', lineHeight: 1 }} className="flame-anim">🔥</span>
+      <div className="absolute top-4 left-0 z-10 pointer-events-none">
+        <FlameCharacter size={140} celebrate className="flame-anim" />
       </div>
 
       <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center z-10 px-6 pt-20">
