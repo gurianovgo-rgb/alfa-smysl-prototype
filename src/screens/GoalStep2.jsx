@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useApp } from '../context/AppContext'
+import FlameCharacter from '../components/FlameCharacter'
 
 export default function GoalStep2() {
   const {
@@ -80,7 +81,7 @@ export default function GoalStep2() {
 
         <div className="flex items-start justify-between mb-4">
           <h1 className="text-white text-2xl font-bold leading-tight">Сколько хочешь<br/>накопить?</h1>
-          <span className="text-5xl flame-anim">🔥</span>
+          <FlameCharacter size={76} className="flame-anim" />
         </div>
 
         <div className="mb-4">
