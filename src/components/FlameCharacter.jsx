@@ -1,5 +1,6 @@
 import React from 'react'
-import fireImg from '../assets/fire_character.svg'
+
+const fireImg = `${import.meta.env.BASE_URL}fire_character.svg`
 
 export default function FlameCharacter({ size = 80, celebrate = false, className = '', style = {} }) {
   return (
