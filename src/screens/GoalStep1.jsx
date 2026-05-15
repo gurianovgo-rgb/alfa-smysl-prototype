@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import { useApp } from '../context/AppContext'
-import { icons } from '../icons'
 
 const QUICK_TAGS = [
   { emoji: '👟', label: 'Кроссовки' },
@@ -29,7 +28,9 @@ export default function GoalStep1() {
 
         <div className="relative px-4 pt-4 pb-6">
           <button onClick={() => setScreen('savings')} className="btn-press p-1 mb-4">
-            <img src={icons.backArrow} className="w-6 h-6 object-contain" alt="" />
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
           <p className="text-[#8E8E93] text-sm">Накопительный счёт ↗</p>
           <p className="text-white text-4xl font-bold mt-1">0 ₽</p>

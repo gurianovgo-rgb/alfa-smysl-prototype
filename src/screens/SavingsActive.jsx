@@ -1,7 +1,6 @@
 import React from 'react'
 import { useApp } from '../context/AppContext'
 import BottomNav from '../components/BottomNav'
-import { icons } from '../icons'
 import FlameCharacter from '../components/FlameCharacter'
 
 export default function SavingsActive() {
@@ -21,7 +20,9 @@ export default function SavingsActive() {
 
         <div className="flex items-center justify-between mb-4">
           <button onClick={() => setScreen('home')} className="btn-press p-1">
-            <img src={icons.backArrow} className="w-6 h-6 object-contain" alt="" />
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+              <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
           </button>
           <span className="text-[#8E8E93] text-sm flex items-center gap-1.5">
             Накопительный счёт
