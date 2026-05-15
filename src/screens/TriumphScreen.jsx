@@ -1,19 +1,21 @@
 import React, { useEffect, useState } from 'react'
 import { useApp } from '../context/AppContext'
+import FlameCharacter from '../components/FlameCharacter'
 
-const CONFETTI_COLORS = ['#FF3B30', '#FFD60A', '#FFFFFF', '#FF9F0A', '#FF453A', '#FFE5B4']
+const CONFETTI_COLORS = ['#FF3B30', '#FFD60A', '#FFFFFF', '#FF9F0A', '#FF453A', '#FFE5B4', '#30D158']
 
 function Confetti() {
   const [pieces] = useState(() =>
-    Array.from({ length: 32 }, (_, i) => ({
+    Array.from({ length: 40 }, (_, i) => ({
       id: i,
       left: Math.random() * 100,
       color: CONFETTI_COLORS[Math.floor(Math.random() * CONFETTI_COLORS.length)],
-      width: 6 + Math.random() * 8,
-      height: 10 + Math.random() * 6,
-      delay: Math.random() * 2,
+      width: 5 + Math.random() * 8,
+      height: 8 + Math.random() * 8,
+      delay: Math.random() * 2.5,
       duration: 2.5 + Math.random() * 2,
       rotate: Math.random() * 360,
+      round: Math.random() > 0.5,
     }))
   )
 
@@ -29,7 +31,7 @@ function Confetti() {
             width: p.width,
             height: p.height,
             background: p.color,
-            borderRadius: '2px',
+            borderRadius: p.round ? '50%' : '2px',
             transform: `rotate(${p.rotate}deg)`,
             animation: `fall ${p.duration}s ${p.delay}s ease-in infinite`,
           }}
@@ -60,8 +62,11 @@ export default function TriumphScreen() {
     setScreen('savings-active')
   }
 
+  const impulseCount = Math.max(3, Math.round(streak * 0.7))
+  const savedAmount = Math.round(goalAmount * 0.65)
+
   return (
-    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter items-center justify-between py-12 px-6 relative overflow-hidden">
+    <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter relative overflow-hidden">
       <Confetti />
 
       <div className="absolute top-4 right-4 z-10">
@@ -72,10 +77,14 @@ export default function TriumphScreen() {
         </button>
       </div>
 
-      <div className="flex-1 flex flex-col items-center justify-center gap-5 text-center z-10">
+      <div className="absolute top-4 left-0 z-10 pointer-events-none">
+        <FlameCharacter size={140} celebrate className="flame-anim" />
+      </div>
+
+      <div className="flex-1 flex flex-col items-center justify-center gap-4 text-center z-10 px-6 pt-20">
         <div
           className="w-20 h-20 rounded-[22px] flex items-center justify-center pop-in"
-          style={{ background: 'linear-gradient(145deg, #FFD60A, #FF9F0A)', boxShadow: '0 0 60px rgba(255,214,10,0.5)' }}
+          style={{ background: 'linear-gradient(145deg, #FFD60A, #FF9F0A)', boxShadow: '0 0 60px rgba(255,214,10,0.4)' }}
         >
           <span style={{ fontSize: '40px' }}>🏆</span>
         </div>
@@ -85,23 +94,23 @@ export default function TriumphScreen() {
           <p className="text-white text-base mb-3">
             {getGoalEmoji()} {goalName}
           </p>
-          <p className="text-white font-bold" style={{ fontSize: '48px' }}>
+          <p className="text-white font-bold" style={{ fontSize: '52px', letterSpacing: '-1px' }}>
             {formatNumber(goalAmount)} ₽
           </p>
         </div>
 
-        <div className="w-full bg-[#1a1a1a] rounded-2xl p-4 fade-in" style={{ animationDelay: '400ms' }}>
-          <div className="flex items-center justify-center gap-2">
-            <span className="text-xl flame-anim">🔥</span>
-            <span className="text-white text-sm font-semibold">
-              {streak} {streak === 1 ? 'день' : 'дней'} без снятий — личный рекорд!
-            </span>
-          </div>
-          <div className="mt-2 h-0.5 bg-[#FF3B30] rounded-full w-1/2 mx-auto" />
+        <div className="w-full bg-[#1a1a1a] rounded-2xl p-4 fade-in text-left" style={{ animationDelay: '350ms' }}>
+          <p className="text-white text-sm font-semibold mb-2">
+            🔥 {streak} {streak === 1 ? 'день' : streak < 5 ? 'дня' : 'дней'} без снятий — личный рекорд.
+          </p>
+          <div className="h-px bg-[#FF3B30] rounded-full mb-3" />
+          <p className="text-[#8E8E93] text-sm leading-relaxed">
+            За всё время ты удержался(-ась) от импульсивных трат {impulseCount} раз и сэкономил(-а) {formatNumber(savedAmount)} ₽ — достойная дисциплина!
+          </p>
         </div>
       </div>
 
-      <div className="w-full flex flex-col gap-3 z-10">
+      <div className="w-full flex flex-col gap-3 z-10 px-6 pb-10 fade-in" style={{ animationDelay: '500ms' }}>
         <button
           onClick={handleNewGoal}
           className="w-full bg-white text-black py-4 rounded-2xl font-semibold text-base btn-press"
