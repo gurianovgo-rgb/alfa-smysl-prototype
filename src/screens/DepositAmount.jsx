@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useApp } from '../context/AppContext'
+import { icons } from '../icons'
 
 export default function DepositAmount() {
   const { setScreen, balance, setDepositAmount, formatNumber } = useApp()
@@ -44,9 +45,7 @@ export default function DepositAmount() {
     <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter">
       <div className="px-4 pt-4 pb-4 flex items-center justify-between">
         <button onClick={() => setScreen('deposit-source')} className="btn-press p-1">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          <img src={icons.backArrow} className="w-6 h-6 object-contain" alt="" />
         </button>
         <span className="text-white text-lg font-semibold">Между счетами</span>
         <div className="w-8" />

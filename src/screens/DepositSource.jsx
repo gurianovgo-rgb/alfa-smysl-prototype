@@ -1,5 +1,6 @@
 import React from 'react'
 import { useApp } from '../context/AppContext'
+import { icons } from '../icons'
 
 export default function DepositSource() {
   const { setScreen } = useApp()
@@ -13,9 +14,7 @@ export default function DepositSource() {
     <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter">
       <div className="px-4 pt-4 pb-4 flex items-center justify-between">
         <button onClick={() => setScreen('deposit')} className="btn-press p-1">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          <img src={icons.backArrow} className="w-6 h-6 object-contain" alt="" />
         </button>
         <div className="text-center">
           <p className="text-white text-base font-semibold">Откуда</p>

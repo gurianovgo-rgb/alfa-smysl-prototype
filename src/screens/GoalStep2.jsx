@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { useApp } from '../context/AppContext'
+import { icons } from '../icons'
 
 export default function GoalStep2() {
   const {
@@ -67,9 +68,7 @@ export default function GoalStep2() {
     <div className="flex flex-col min-h-dvh bg-[#0a0a0a] screen-enter">
       <div className="px-4 pt-4 pb-4">
         <button onClick={() => setScreen('goal-step1')} className="btn-press p-1 mb-2">
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-          </svg>
+          <img src={icons.backArrow} className="w-6 h-6 object-contain" alt="" />
         </button>
         <p className="text-[#8E8E93] text-sm">Накопительный счёт ↗</p>
         <p className="text-white text-4xl font-bold">0 ₽</p>

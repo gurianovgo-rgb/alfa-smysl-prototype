@@ -1,6 +1,7 @@
 import React from 'react'
 import { useApp } from '../context/AppContext'
 import BottomNav from '../components/BottomNav'
+import { icons } from '../icons'
 
 export default function SavingsScreen() {
   const { setScreen } = useApp()
@@ -10,9 +11,7 @@ export default function SavingsScreen() {
       <div className="px-4 pt-4">
         <div className="flex items-center justify-between mb-6">
           <button onClick={() => setScreen('home')} className="btn-press p-1">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-              <path d="M15 18L9 12L15 6" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
+            <img src={icons.backArrow} className="w-6 h-6 object-contain" alt="" />
           </button>
           <div className="flex items-center gap-2">
             <span className="text-white text-lg font-semibold">Накопительный счёт</span>
